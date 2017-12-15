@@ -1,0 +1,22 @@
+
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" [routerLink]="['home']">{{intro}}</a>
+    <ul class="nav navbar-nav">
+      <li *ngIf="isAdmin()" class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['role']">Role</a>
+      </li>
+      <li *ngIf="isAdmin()" class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['user']">User</a>
+      </li>
+      <li *ngIf="isGuest()" class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['register']">Register</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="!isGuest()" class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['login']">Logout</a>
+        </li>
+      </ul>
+ 
+</nav>
+

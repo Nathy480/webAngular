@@ -1,0 +1,52 @@
+<div class="jumbotron">
+    <h1>Register Page</h1>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <h1>Register</h1>
+
+        
+        <hr><br>
+        <form (ngSubmit)="onRegister()" novalidate>
+
+        <div class="form-group">
+            <label for="firstname">Firstname</label>
+            <input type="text" class="form-control" id="firstname" placeholder="enter firstname" [(ngModel)]="user.firstname" name="firstname" required>
+        </div> 
+
+        <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" class="form-control" id="lastname" placeholder="enter lastname" [(ngModel)]="user.lastname" name="lastname" required>
+        </div>         
+
+         <div class="form-group">
+           <label for="email">Email</label>
+           <input type="text" class="form-control" id="email" placeholder="enter email" [(ngModel)]="user.email" name="email" required>
+         </div>
+
+         <div class="form-group">
+            <label for="dob">DateOfBirth</label>
+            <input type="date" class="form-control" id="dob" placeholder="enter DateOfBirth " [(ngModel)]="user.dob" name="dob" required>
+          </div>
+         <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="enter username" [(ngModel)]="user.username" name="username" required>
+        </div> 
+         <div class="form-group">
+           <label for="password">Password</label>
+           <input type="password" class="form-control" id="password" placeholder="enter password" [(ngModel)]="user.password" name="password" required>
+         </div>
+         <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" placeholder="enter role " [(ngModel)]="user.role" name="role" required>
+          </div>
+
+         <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+
+
+
+    
